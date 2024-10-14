@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Font-size: 15px;
+  /* - Family: [Poppins]
+  - Weights: 200, 400, 600 */
+}
+
+body {
+  background-color: var(--Very-Light-Gray);
+}
+
+.container {
+  width: min(90%, 315px);
+  margin: 80px auto;
+  text-align: center;
+  font-family: "Poppins";
+  color: var(--Grayish-Blue);
+  font-weight: 200;
+}
+
+.container__title {
+  color: var(--Grayish-Blue);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.container__title--unique {
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.container__text {
+  padding-top: 20px;
+  line-height: 1.5;
+  font-weight: 200;
+}
+
+.container__body {
+  padding: 80px 0;
+  text-align: left;
+}
+
+.card {
+  min-height: 225px;
+  background-color: #ffffff;
+  margin-bottom: 26px;
+  padding: 25px 25px 0 25px;
+  border-radius: 5px;
+  border-top: 5px solid;
+  box-shadow: 0 10px 25px rgb(84 158 242 / 25%);
+}
+
+.card__title {
+  font-size: 20px;
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.card__text {
+  padding: 6px 0 32px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.card__image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card__image img {
+  display: block;
+}
+
+.red {
+  border-color: var(--Red);
+}
+
+.cyan {
+  border-color: var(--Cyan);
+}
+
+.blue {
+  border-color: var(--Blue);
+}
+
+.orange {
+  border-color: var(--Orange);
+}
+
+@media (min-width: 825px) {
+  .container {
+    width: min(90%, 1110px);
+  }
+  .container__text {
+    max-width: 525px;
+    margin: 0 auto;
+  }
+  .container__body {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(5vw, 350px));
+    gap: 30px;
+    padding: 62px 0 0;
+  }
+  .card {
+    min-height: 250px;
+    margin: 0;
+  }
+  .card__text {
+    min-height: 101px;
+  }
+  .cyan {
+    order: 1;
+    transform: translateY(125px);
+  }
+  .red {
+    order: 2;
+  }
+  .blue {
+    order: 3;
+    transform: translateY(125px);
+  }
+  .orange {
+    order: 4;
+    grid-column: 2/3;
+  }
+}
